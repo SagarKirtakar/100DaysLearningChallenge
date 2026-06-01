@@ -62,7 +62,31 @@ class SinglyLinkedList {
     }
 
     removeAt(index) {
-        
+        if(index < 0 || index >= this.size) {
+            console.error('Invalid index');
+            return null;
+        }
+        let removeData;
+        if(index === 0) {
+            remmoveData = this.head.data;
+            this.head = this.head.next;
+        }else {
+            let current = this.head;
+            let previous = null;
+            let count = 0;
+
+            while(count<index) {
+                previous = current;
+                current = current.next;
+                count++;
+            }
+            
+            removeData = current.data;
+            previous.next = current.next;
+        }
+
+        this.size--;
+        return removeData;
     }
 
 }
