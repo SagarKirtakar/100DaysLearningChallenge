@@ -43,6 +43,26 @@ class SinglyLinkedList {
             this.prepend(data);
             return true;
         }
+
+        const newNode = new Node(data);
+        let current  = this.head;
+        let previous = null;
+        let count = 0;
+
+        while(count<index) {
+            previous = current;
+            current = current.next;
+            count++;
+        }
+
+        newNode.next = current;
+        previous.next = newNode;
+        this.size++;
+        return true;
+    }
+
+    removeAt(index) {
+        
     }
 
 }
