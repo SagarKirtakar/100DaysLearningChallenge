@@ -1,7 +1,7 @@
-function Node(value, next = null) {
-    this.value = value;
-    this.next = next;
+class Node {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
+    }
 }
 
-const node = new Node(2);
-console.log(node);
