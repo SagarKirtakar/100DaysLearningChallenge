@@ -89,4 +89,14 @@ class SinglyLinkedList {
         return removeData;
     }
 
+    isEmpty() {
+        return this.size ===0;
+    }
+    getSize() {
+        return this.size;
+    }
+
+    printList() {
+        
+    }
 }
