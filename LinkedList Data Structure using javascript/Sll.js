@@ -97,6 +97,26 @@ class SinglyLinkedList {
     }
 
     printList() {
-        
+        let current  = this.head;
+        let result = '';
+        while(current) {
+            result += current.data + '-> ';
+            current = current.next;
+        }
+        result += ' null ';
+        console.log(result);
     }
 }
+
+const list = new SinglyLinkedList();
+list.append(10);
+list.append(20);
+list.append(30);
+list.append(40);
+list.append(50);
+list.append(60);
+
+list.prepend(70);
+
+list.insertAt(80,2);
+list.printList();
