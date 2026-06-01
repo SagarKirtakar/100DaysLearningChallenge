@@ -120,3 +120,7 @@ list.prepend(70);
 
 list.insertAt(80,2);
 list.printList();
+
+const x =list.removeAt(4);
+console.log(x);
+list.printList();
